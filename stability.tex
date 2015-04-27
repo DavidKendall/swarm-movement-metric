@@ -544,27 +544,24 @@ Google as part of Project Loon to create mobile communications
 platforms, has created a new set of requirements for swarm
 coordination.
 
-Swarms are now required to follow designated paths or be able to
-predictably maintain a stable mesh structure providing a more flexible
-platform for a swarm's application.
+These requirements include the ability
+to follow designated paths and to maintain stable mesh structures, appropriate to the
+swarm's application.
 
-Decreasing the \stability{} within a swarm will increase the potential
-applications that a swarm could be used for by improving the accuracy
-of sensors arrays or creating a communications architecture with
-improved tolerances.
+Decreasing the \stability{} within a swarm increases the potential
+applications, for example by improving the accuracy
+of sensor arrays.
 
-This paper begins with a discussion of the basic boid model and
-proposes a metric for the internal movement of boid-based swarms. We
-then show how the metric can be applied to the analysis of the
-internal movement of swarms. The utility of the metric is demonstrated
+This paper begins with a discussion of a basic swarm model and
+proposes a metric for the internal movement of swarms. We
+then show how the metric can be applied to the analysis of
+internal movement. The utility of the metric is demonstrated
 by its application to the comparison of the internal movement of two
-swarms. We show that it is possible to quantify the internal movement
-of a swarm, and so assess its suitability for a task.
+swarms and to the assessment of their suitability for tasks.
 
 The metric discussed in this paper can be applied to any swarm
 algorithm to determine the amount of \stability{} that the algorithm
-generates and therefore allows algorithms to be compared to determine
-a swarms suitability for a task.
+generates and therefore allows algorithms to be compared.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -608,23 +605,19 @@ Swarming, Swarm Dynamics, Mobile Sensor Networks, Algorithms.
 
 \section{Introduction\label{section:introduction}}
 
-\emph{Swarms}, which are collections of similar devices called
-\emph{bots} that work co-cooperatively, are now used to carry out many
-tasks. The co-ordination of swarms for a particular task requires that
-certain features or characteristics are inherent within the algorithms
-that co-ordinate the movement of bots. General movement is usually
-achieved by using a derivative of the Boid model \cite{CR87} which
-controls the overall cohesion, adhesion and direction of the swarm
-(This paper will not look at direction but a future paper will look at
-the effect of a directional vector in terms of the \stability{}) which
-influence the stability by effecting the cohesion and repulsion
-between bots during a swarms lifetime. In this paper the analysis of
-the \stability{}, which is the degree of agitation of the bots, will
-focused on the effect of the cohesion and repulsion.  The discussion
-of Stability as discussed in \cite{VGKP02} \cite{XCFPLLHF06} generally
-focuses on the ability of a swarm to remain a single functional unit,
-this paper differs in that the focus is not on the cohesiveness of the
-swarm but focuses on a swarms \stability{}.
+A swarm is a set of autonomous, mobile devices (\emph{bots}),
+whose motion is governed by a set of rules that may give the appearance
+of cooperation.
+Typically, movement is
+achieved by using some variation of the Boid model \cite{CR87}, which
+controls the cohesion, repulsion and direction of the swarm.
+In this paper, the analysis of
+the \stability{} (the degree of agitation of the bots) depends
+on the effects of cohesion, repulsion and direction.  It differs from the discussion
+of stability in \cite{VGKP02} and \cite{XCFPLLHF06} by focusing on the
+measurement of \stability{} rather than on the tendency of a swarm to remain as a single functional
+unit.
+
 
 This paper presents a method of determining the \stability{} of a
 swarm. The main difference between the method discussed here to others
