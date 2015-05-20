@@ -620,42 +620,26 @@ unit.
 
 
 This paper presents a method of determining the \stability{} of a
-swarm. The main difference between the method discussed here to others
-\cite{VGKP02} \cite{XCFPLLHF06} is the that this paper will be
-focusing on the degree of agitation inside the swarm whereas other
-methods covered by Gazo in \cite{VGKP11} are focused towards the
-predictability of the swarms' structure. By creating predictability
-the use of the swarm can be focused to specific tasks such as
-surveillance and search and rescue.
+swarm. The main difference of the method discussed here is that it focuses on the degree of agitation inside the swarm whereas other
+methods covered by \cite{VGKP02} \cite{XCFPLLHF06} \cite{VGKP11} focus on the
+predictability of swarm structure. The analysis made possible by this approach allows the tuning of swarm parameters in order to reduce energy consumption.
 
-The remainder of this paper is structured into sections as follows:
-\ref{section:swarmDynamics} describes the coordination of
-swarms. Section \ref{section:swarmNeighbourDetection} describes the
-method by which neighbours are detected. Section
-\ref{section:swarmStabilisation} describes the phases that a swarm
-migrates through as it develops. \ref{methods:SwarmStability}
-describes the internal movement of a swarm. Section
-\ref{methods:SwarmTypesStability1} describes the different types of
-mesh structures a swarm can be constructed of. Section
-\ref{section:stabilityComparison} compares the internal effect of the
-different types of swarms. Section \ref{section:futureWork} describes
+The remainder of this paper is structured as follows:
+Section~\ref{section:swarmDynamics} describes the coordination of
+swarms. Section~\ref{section:swarmNeighbourDetection} describes the
+method by which neighbours are detected. Swarm initiation and internal movement are described in sections~\ref{section:swarmStabilisation} and \ref{methods:SwarmStability}, respectively. Section~\ref{methods:SwarmTypesStability1} describes the different types of
+mesh structure a swarm can have. Section~\ref{section:stabilityComparison} compares the internal effect of the
+different types of swarm. Section~\ref{section:futureWork} describes
 future work that could utilise the metric described in this paper.
 
 \section{Swarm Dynamics\label{section:swarmDynamics}}
 
-A swarm's coordination is achieved by the implementation of a weighted
-model based upon vectors. There are two distinct ways in which swarms
-are controlled. One is autonomously where each bot in the swarm
-calculates its own movements (as used in this paper). The other
-mechanism is to centrally calculate every bot's required movement and
-then relay the movement to each bot via a communications
-infrastructure.
+Swarm coordination is achieved by the implementation of a weighted vector model. There are two distinct ways in which swarms
+are controlled. One is autonomously, where each bot in the swarm
+calculates its own movements (as used in this paper); the other is centralised calculation and communication of every bot's required movement.
 
 The basic algorithm for the swarm structure in this paper is that all
-bots in the swarm control their own movement by generating a distinct
-directional vector from the calculated cohesion and repulsion vectors,
-these component parts are then weighted, and applied to create each
-bots direction.
+bots in the swarm control their own movement by generating a vector which is a weighted sum of the calculated cohesion, repulsion and direction vectors.
 
 The two basic vectors are \emph{cohesion} and \emph{repulsion}. Each
 bot must detect its neighbours then move towards the centroid of those
